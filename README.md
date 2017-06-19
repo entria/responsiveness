@@ -2,6 +2,9 @@
 
 Responsive style tools for ReactJS
 
+[Demo](https://entria.github.io/responsiveness/)
+
+
 # Install
 
 `npm install responsiveness --save` or `yarn add responsiveness`
