@@ -15,7 +15,7 @@ class Responsive extends Component {
 
   static propTypes = {
     style: PropTypes.shape({
-      base: {},
+      base: PropTypes.object,
       small: PropTypes.object,
       medium: PropTypes.object,
       large: PropTypes.object,
