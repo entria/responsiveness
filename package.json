@@ -1,8 +1,17 @@
 {
   "name": "responsiveness",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Responsive style tools for ReactJS",
+  "keywords": [
+    "react",
+    "responsive"
+  ],
   "license": "ISC",
+  "homepage": "https://github.com/entria/responsiveness#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entria/responsiveness"
+  },
   "main": "lib/index.js",
   "devDependencies": {
     "babel-cli": "^6.24.1",
