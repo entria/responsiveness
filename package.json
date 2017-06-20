@@ -13,21 +13,31 @@
     "url": "git+https://github.com/entria/responsiveness"
   },
   "main": "lib/index.js",
+  "module": "src/index.js",
+  "jsnext:main": "src/index.js",
   "devDependencies": {
     "@kadira/storybook": "^2.35.3",
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "gh-pages": "^1.0.0"
-  },
-  "dependencies": {
-    "prop-types": "^15.5.10",
+    "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
+  "dependencies": {
+    "prop-types": "^15.5.10"
+  },
+  "peerDependencies": {
+    "react": ">=0.14",
+    "react-dom": ">=0.14"
+  },
   "scripts": {
-    "prepublish": "npm run build && npm run build-storybook && npm run publish-storybook",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "npm run pub",
+    "postpublish": "npm run build-storybook && npm run publish-storybook",
+    "pub": "npm publish ./",
     "build": "babel src -d lib",
     "build-storybook": "build-storybook -c storybook",
     "publish-storybook": "gh-pages -d storybook-static/",
