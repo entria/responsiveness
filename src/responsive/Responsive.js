@@ -24,7 +24,7 @@ class Responsive extends Component {
 
   state = {
     timeout: null,
-    viewport: getViewport(window.outerWidth),
+    viewport: getViewport(window.innerWidth),
   };
 
   componentDidMount() {
@@ -41,7 +41,7 @@ class Responsive extends Component {
     this.setState({
       timeout: setTimeout(() => {
         this.setState({
-          viewport: getViewport(window.outerWidth),
+          viewport: getViewport(window.innerWidth),
         });
       }, 100),
     });
