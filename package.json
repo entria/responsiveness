@@ -33,14 +33,14 @@
     "react-dom": ">=0.14"
   },
   "scripts": {
-    "preversion": "npm test",
-    "version": "npm run build",
-    "postversion": "npm run pub",
-    "postpublish": "npm run build-storybook && npm run publish-storybook",
-    "pub": "npm publish ./",
     "build": "babel src -d lib",
-    "build-storybook": "build-storybook -c storybook",
-    "publish-storybook": "gh-pages -d storybook-static/",
-    "start": "start-storybook -p 6006 -c storybook"
+    "start": "start-storybook -p 6006 -c storybook",
+    "demo:build": "build-storybook -c storybook",
+    "demo:gh-pages": "gh-pages -d storybook-static/",
+    "demo:publish": "npm run demo:build && npm run demo:gh-pages",
+    "prerelease": "npm run test && npm run build",
+    "release:patch": "npm run prerelease && npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm run prerelease && npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm run prerelease && npm version major && git push --follow-tags && npm publish"
   }
 }
