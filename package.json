@@ -1,6 +1,6 @@
 {
   "name": "@entria/responsiveness",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Responsive style tools for ReactJS",
   "keywords": [
     "react",
