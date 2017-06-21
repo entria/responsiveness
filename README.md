@@ -13,7 +13,7 @@ Responsive style tools for ReactJS
 
 ```js
 import React from 'react';
-import { Grid } from 'responsiveness';
+import { Grid } from '@entria/responsiveness';
 
 const Example = () => (
   <Grid.Row>
