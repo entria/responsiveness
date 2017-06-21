@@ -7,7 +7,7 @@ Responsive style tools for ReactJS
 
 # Install
 
-`npm install responsiveness --save` or `yarn add responsiveness`
+`npm install @entria/responsiveness --save` or `yarn add @entria/responsiveness`
 
 # Usage
 
