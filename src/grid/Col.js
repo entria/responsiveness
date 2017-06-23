@@ -5,7 +5,7 @@ import config from '../config';
 import { BASE, SMALL, MEDIUM, LARGE } from '../constants';
 import Responsive from '../responsive';
 
-const Col = ({ children, small, medium, large, cols }) => {
+const Col = ({ children, small, medium, large, cols, sizes }) => {
   const styles = {};
 
   styles[BASE] = {
@@ -14,15 +14,15 @@ const Col = ({ children, small, medium, large, cols }) => {
   };
 
   styles[SMALL] = {
-    flex: `0 0 ${small * 100 / cols}%`,
+    flex: `0 0 ${(sizes[0] || small) * 100 / cols}%`,
   };
 
   styles[MEDIUM] = {
-    flex: `0 0 ${medium * 100 / cols}%`,
+    flex: `0 0 ${(sizes[1] || medium) * 100 / cols}%`,
   };
 
   styles[LARGE] = {
-    flex: `0 0 ${large * 100 / cols}%`,
+    flex: `0 0 ${(sizes[2] || large) * 100 / cols}%`,
   };
 
   return (
@@ -37,6 +37,7 @@ Col.defaultProps = {
   medium: config.cols,
   large: config.cols,
   cols: config.cols,
+  sizes: [],
 };
 
 Col.propTypes = {
@@ -45,6 +46,7 @@ Col.propTypes = {
   medium: PropTypes.number,
   large: PropTypes.number,
   cols: PropTypes.number,
+  sizes: PropTypes.array,
 };
 
 export default Col;
