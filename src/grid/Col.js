@@ -46,7 +46,7 @@ Col.propTypes = {
   medium: PropTypes.number,
   large: PropTypes.number,
   cols: PropTypes.number,
-  sizes: PropTypes.array,
+  sizes: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default Col;
