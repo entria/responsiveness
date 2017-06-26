@@ -7,9 +7,15 @@ Responsive style tools for ReactJS
 
 # Install
 
-`npm install responsiveness --save` or `yarn add responsiveness`
+```bash
+yarn add responsiveness
+# or
+npm install responsiveness --save
+```
 
-# Usage
+# Usage 
+
+You can define the sizes with your specifics props (small, medium, large).
 
 ```js
 import React from 'react';
@@ -27,9 +33,26 @@ const Example = () => (
 export default Example;
 ```
 
+Or with the `sizes` prop (The parameters is from smaller to greater breakpoints).
+
+```js
+import React from 'react';
+import { Grid } from 'responsiveness';
+
+const Example = () => (
+  <Grid.Row>
+    <Grid.Col sizes={[12, 6, 3]}>1</Grid.Col>
+    <Grid.Col sizes={[12, 6, 3]}>2</Grid.Col>
+  </Grid.Row>
+);
+
+export default Example;
+```
+
 ### Grid.Col props
 
 - **cols**: number of columns (default: 12)
 - **large**: size of the column on large devices (default: 12)
 - **medium**: size of the column on medium devices (default: 12)
 - **small**: size of the column on small devices (default: 12)
+- **sizes**: An array containing all column sizes. (default: [12, 12, 12])
