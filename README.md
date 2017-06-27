@@ -8,18 +8,17 @@ Responsive style tools for ReactJS
 # Install
 
 ```bash
+npm i responsiveness --save
 yarn add responsiveness
-# or
-npm install responsiveness --save
 ```
 
 # Usage 
 
-You can define the sizes with your specifics props (small, medium, large).
+You can define the sizes with their specifics props (`small`, `medium`, `large`).
 
 ```js
 import React from 'react';
-import { Grid } from 'responsiveness';
+import { Grid } from '@entria/responsiveness';
 
 const Example = () => (
   <Grid.Row>
@@ -43,6 +42,8 @@ const Example = () => (
   <Grid.Row>
     <Grid.Col sizes={[12, 6, 3]}>1</Grid.Col>
     <Grid.Col sizes={[12, 6, 3]}>2</Grid.Col>
+    <Grid.Col sizes={[12, 6, 3]}>3</Grid.Col>
+    <Grid.Col sizes={[12, 6, 3]}>4</Grid.Col>
   </Grid.Row>
 );
 

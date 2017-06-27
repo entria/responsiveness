@@ -7,8 +7,8 @@ const Row = ({ children, alignItems, justifyContent }) => {
   const styles = {
     boxSizing: 'border-box',
     display: 'flex',
-    alignItems: alignItems,
-    justifyContent: justifyContent,
+    alignItems,
+    justifyContent,
     flexWrap: 'wrap',
     margin: -config.gutter,
   };
@@ -18,6 +18,11 @@ const Row = ({ children, alignItems, justifyContent }) => {
       {children}
     </div>
   );
+};
+
+Row.defaultProps = {
+  alignItems: null,
+  justifyContent: null,
 };
 
 Row.propTypes = {
