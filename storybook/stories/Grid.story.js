@@ -33,6 +33,26 @@ stories.add('default', () => (
   </Grid.Row>
 ));
 
+stories.add('using sizes', () => (
+  <Grid.Row>
+    <Grid.Col sizes={[12, 6, 4]}>
+      <div style={styles.box}>
+        1
+      </div>
+    </Grid.Col>
+    <Grid.Col sizes={[6, 3, 4]}>
+      <div style={styles.box}>
+        2
+      </div>
+    </Grid.Col>
+    <Grid.Col sizes={[6, 3, 4]}>
+      <div style={styles.box}>
+        3
+      </div>
+    </Grid.Col>
+  </Grid.Row>
+));
+
 const styles = {
   box: {
     padding: 10,
