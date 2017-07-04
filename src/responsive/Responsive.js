@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import getViewport from './utils';
+import { getViewport } from './utils';
 
 class Responsive extends Component {
   static defaultProps = {
