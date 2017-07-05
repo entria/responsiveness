@@ -8,11 +8,11 @@ Responsive style tools for ReactJS
 # Install
 
 ```bash
-npm i responsiveness --save
-yarn add responsiveness
+npm i @entria/responsiveness --save
+yarn add @entria/responsiveness
 ```
 
-# Usage 
+# Usage
 
 You can define the sizes with their specifics props (`small`, `medium`, `large`).
 
@@ -36,7 +36,7 @@ Or with the `sizes` prop (The parameters is from smaller to greater breakpoints)
 
 ```js
 import React from 'react';
-import { Grid } from 'responsiveness';
+import { Grid } from '@entria/responsiveness';
 
 const Example = () => (
   <Grid.Row>
