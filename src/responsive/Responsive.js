@@ -22,30 +22,34 @@ class Responsive extends Component {
     }),
   };
 
+  constructor(props) {
+    super(props);
+    this.timeout = null;
+  }
+
   state = {
-    timeout: null,
     viewport: getViewport(window.innerWidth),
   };
 
   componentDidMount() {
-    window.addEventListener('resize', () => this.handleResize());
+    window.addEventListener('resize', this.handleResize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', () => this.handleResize());
+    clearTimeout(this.timeout);
+
+    window.removeEventListener('resize', this.handleResize);
   }
 
-  handleResize() {
-    clearTimeout(this.state.timeout);
+  handleResize = () => {
+    clearTimeout(this.timeout);
 
-    this.setState({
-      timeout: setTimeout(() => {
-        this.setState({
-          viewport: getViewport(window.innerWidth),
-        });
-      }, 100),
-    });
-  }
+    this.timeout = setTimeout(() => {
+      this.setState({
+        viewport: getViewport(window.innerWidth),
+      });
+    }, 100);
+  };
 
   render() {
     const style = {
